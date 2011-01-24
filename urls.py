@@ -12,6 +12,7 @@ urlpatterns = patterns(
     (r'^$', compilepython.views.redirect_to_session),
     (r'^(?P<sSessionId>\w+)$', compilepython.views.session),
     (r'^(?P<sSessionId>\w+)/compile/?$', compilepython.views.compile_python),
+    (r'^(?P<sSessionId>\w+)/submissions/?$', compilepython.views.get_pcfs),
     (r'static/(?P<path>.*)$', 'django.views.static.serve', {
         'document_root': settings.STATIC_ROOT})
                                                             
