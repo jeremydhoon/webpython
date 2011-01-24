@@ -1,0 +1,7 @@
+[submodule "pyjamas"]
+	path = pyjamas
+	url = git://pyjs.org/git/pyjamas.git
+
+[submodule "static/codemirror"]
+	path = static/codemirror
+	url = git://github.com/marijnh/CodeMirror.git

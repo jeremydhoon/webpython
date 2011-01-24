@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta name="pygwt:mpdule" content="webpython"/>
+<title>Web Python Console</title>
+
+<link rel="stylesheet" href="/static/styles.css"/>
+
+<script language="javascript" type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+
+<script language="javascript" text="text/javascript">
+{% block script %}
+var dictWebPythonProperties = {{dictProperties|safe}};
+{% endblock script %}
+</script>
+
+<script language="javascript" type="text/javascript"
+src="/static/codemirror/js/codemirror.js"></script>
+
+<script language="javascript" type="text/javascript"
+src="/static/webpython.js"></script>
+
+<script language="javascript" type="text/javascript"
+src="/static/_pyjs.js"></script>
+
+<script>//<!--
+var $wnd = parent;
+var $doc = $wnd.document;
+var $moduleName = "Hello";
+var $pyjs = new Object();
+$pyjs.global_namespace = this;
+$pyjs.__modules__ = {};
+$pyjs.loaded_modules = {};
+$pyjs.options = new Object();
+$pyjs.options['arg_ignore'] = false;
+$pyjs.options['arg_count'] = false;
+$pyjs.options['arg_is_instance'] = false;
+$pyjs.options['arg_instance_type'] = false;
+$pyjs.options['arg_kwarg_dup'] = false;
+$pyjs.options['arg_kwarg_unexpected_keyword'] = false;
+$pyjs.options['arg_kwarg_multiple_values'] = false;
+$pyjs.options['dynamic_loading'] = false;
+$pyjs.trackstack = [];
+$pyjs.track = {module:'__main__', lineno: 1};
+$pyjs.trackstack.push($pyjs.track);
+$pyjs.__last_exception_stack__ = null;
+$pyjs.__last_exception__ = null;
+
+/*
+ * prepare app system vars
+ */
+$pyjs.platform = 'safari';
+$pyjs.appname = 'Hello';
+$pyjs.loadpath = './';
+
+//-->
+</script>
+
+<script language="javascript" type="text/javascript"
+src="/static/pyjslib.js"></script>
+
+<script language="javascript" type="text/javascript">
+// added to make printing work
+var $p = $pyjs.loaded_modules['pyjslib']().pyjslib(null);
+$p.printFunc = WebPython.print;
+
+</script>
+
+</head>
+
+<body>
+
+<div id="title_holder">
+  <div id="title">
+    Web Python Console
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="omni">
+  <div id="code_panel">
+    <div id="console_area">
+      <pre id="console"></pre>
+    </div>
+    <div id="editor_area">
+      <textarea id="editor"></textarea>
+    </div>
+    <div id="buttons">
+      <a href="" id="run">Run</a>
+    </div>
+  </div>
+  <div id="community_panel">
+    <div id="submission_list">
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<script language="javascript" type="text/javascript"
+src="/static/bootstrap.js"></script>
+
+</body>
+</html>

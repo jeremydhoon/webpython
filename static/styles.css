@@ -1,0 +1,78 @@
+div.clear {
+    clear: both;
+}
+
+body {
+    background-color: #444444;
+    font-family: Helvetica, arial, Georgia, sans-serif;
+    font-size: 20px;
+}
+
+div#omni {
+    background-color: #FFFFFF;
+    width: 1024px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#code_panel {
+    float: left;
+    width: 800px;
+    padding: 6px;
+}
+
+div#community_panel {
+    float: left;
+    width: 200px;
+    padding: 6px;
+}
+
+pre#console {
+    font-size: 14px;
+    background-color: #000000;
+    color: #00DD00;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 320px;
+}
+
+div#editor_area {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea#editor {
+    width: 100%;
+    min-height: 320px;
+}
+
+div#title_holder {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#title {
+    color: #AA0004;
+    font-size: 32px;
+    float:right;
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+
+div#buttons {
+    width: 100%;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.CodeMirror-line-numbers {
+  font-size: 12px;
+  font: monospace;
+  background-color: #00D0D0;
+}
